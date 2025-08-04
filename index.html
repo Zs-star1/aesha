@@ -1,0 +1,1150 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>كتيب هدية من الأم لابنتها في مرحلة البلوغ</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Tajawal:wght@300;400;500;700&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Tajawal', sans-serif;
+            background: linear-gradient(135deg, #fdf2f8 0%, #fce7f3 25%, #fbcfe8 50%, #f9a8d4 75%, #fce7f3 100%);
+            min-height: 100vh;
+            overflow-x: hidden;
+            position: relative;
+            animation: backgroundShift 15s ease-in-out infinite;
+        }
+        
+        @keyframes backgroundShift {
+            0%, 100% { background: linear-gradient(135deg, #fdf2f8 0%, #fce7f3 25%, #fbcfe8 50%, #f9a8d4 75%, #fce7f3 100%); }
+            50% { background: linear-gradient(135deg, #fbcfe8 0%, #fdf2f8 25%, #fce7f3 50%, #fbcfe8 75%, #f9a8d4 100%); }
+        }
+        
+        .floating-hearts {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+        }
+        
+        .heart {
+            position: absolute;
+            font-size: 18px;
+            color: rgba(236, 72, 153, 0.3);
+            animation: floatUp 12s infinite linear;
+            filter: drop-shadow(0 0 10px rgba(236, 72, 153, 0.2));
+        }
+        
+        @keyframes floatUp {
+            0% {
+                transform: translateY(100vh) rotate(0deg) scale(0.5);
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+                transform: translateY(90vh) rotate(36deg) scale(1);
+            }
+            90% {
+                opacity: 1;
+                transform: translateY(10vh) rotate(324deg) scale(1.2);
+            }
+            100% {
+                transform: translateY(-100px) rotate(360deg) scale(0.5);
+                opacity: 0;
+            }
+        }
+        
+        .sparkles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+        }
+        
+        .sparkle {
+            position: absolute;
+            font-size: 12px;
+            color: rgba(236, 72, 153, 0.4);
+            animation: sparkleFloat 8s infinite linear;
+        }
+        
+        @keyframes sparkleFloat {
+            0% {
+                transform: translateY(100vh) translateX(0) rotate(0deg);
+                opacity: 0;
+            }
+            20% {
+                opacity: 1;
+            }
+            80% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-50px) translateX(100px) rotate(720deg);
+                opacity: 0;
+            }
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .booklet {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 30px;
+            box-shadow: 0 30px 80px rgba(219, 39, 119, 0.2), 0 0 50px rgba(168, 85, 247, 0.1);
+            overflow: hidden;
+            backdrop-filter: blur(15px);
+            border: 2px solid rgba(255, 255, 255, 0.4);
+            position: relative;
+        }
+        
+        .booklet::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, rgba(236, 72, 153, 0.02) 0%, rgba(244, 114, 182, 0.02) 100%);
+            pointer-events: none;
+            z-index: 1;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #ec4899 0%, #f472b6 25%, #f9a8d4 50%, #fbcfe8 75%, #ec4899 100%);
+            padding: 50px 40px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            z-index: 2;
+        }
+        
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><defs><pattern id="pattern" x="0" y="0" width="50" height="50" patternUnits="userSpaceOnUse"><text x="25" y="30" text-anchor="middle" font-size="20" fill="rgba(255,255,255,0.15)">🌸</text></pattern></defs><rect width="200" height="200" fill="url(%23pattern)"/></svg>') repeat;
+            animation: float 25s infinite linear;
+        }
+        
+        .header::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 30% 70%, rgba(255,255,255,0.2) 0%, transparent 50%),
+                        radial-gradient(circle at 70% 30%, rgba(236, 72, 153, 0.3) 0%, transparent 50%);
+            animation: shimmer 6s ease-in-out infinite;
+        }
+        
+        @keyframes shimmer {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 0.7; }
+        }
+        
+        @keyframes float {
+            0% { transform: translateX(0) translateY(0); }
+            100% { transform: translateX(-50px) translateY(-50px); }
+        }
+        
+        .main-title {
+            font-family: 'Amiri', serif;
+            font-size: 3rem;
+            color: white;
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.3), 0 0 20px rgba(255,255,255,0.5);
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 3;
+            line-height: 1.2;
+            animation: titleGlow 3s ease-in-out infinite;
+        }
+        
+        @keyframes titleGlow {
+            0%, 100% { text-shadow: 3px 3px 6px rgba(0,0,0,0.3), 0 0 20px rgba(255,255,255,0.5); }
+            50% { text-shadow: 3px 3px 6px rgba(0,0,0,0.3), 0 0 30px rgba(255,255,255,0.8), 0 0 40px rgba(236, 72, 153, 0.4); }
+        }
+        
+        .subtitle {
+            font-size: 1.3rem;
+            color: rgba(255,255,255,0.95);
+            margin-bottom: 30px;
+            position: relative;
+            z-index: 3;
+            font-weight: 300;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+        
+        .header-icons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 30px 0;
+            position: relative;
+            z-index: 3;
+        }
+        
+        .header-icon {
+            font-size: 3rem;
+            animation: bounce 2s infinite;
+            filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.2)) drop-shadow(0 0 15px rgba(255,255,255,0.3));
+        }
+        
+        .header-icon:nth-child(2) {
+            animation-delay: 0.3s;
+        }
+        
+        .header-icon:nth-child(3) {
+            animation-delay: 0.6s;
+        }
+        
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0) scale(1); }
+            50% { transform: translateY(-15px) scale(1.1); }
+        }
+        
+        .content-area {
+            padding: 50px 40px;
+            min-height: 600px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .menu-container {
+            display: block;
+        }
+        
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+        
+        .menu-item {
+            background: linear-gradient(135deg, rgba(236, 72, 153, 0.08) 0%, rgba(244, 114, 182, 0.08) 100%);
+            border: 2px solid rgba(236, 72, 153, 0.15);
+            border-radius: 20px;
+            padding: 30px;
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .menu-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+            transition: left 0.5s;
+        }
+        
+        .menu-item::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            background: radial-gradient(circle, rgba(236, 72, 153, 0.1) 0%, transparent 70%);
+            transition: all 0.4s ease;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+        }
+        
+        .menu-item:hover::before {
+            left: 100%;
+        }
+        
+        .menu-item:hover::after {
+            width: 300px;
+            height: 300px;
+        }
+        
+        .menu-item:hover {
+            transform: translateY(-10px) scale(1.03);
+            box-shadow: 0 25px 50px rgba(236, 72, 153, 0.25), 0 0 30px rgba(244, 114, 182, 0.15);
+            border-color: rgba(236, 72, 153, 0.4);
+            background: linear-gradient(135deg, rgba(236, 72, 153, 0.15) 0%, rgba(244, 114, 182, 0.15) 100%);
+        }
+        
+        .menu-icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            display: block;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+            filter: drop-shadow(0 0 10px rgba(236, 72, 153, 0.3));
+            animation: iconFloat 3s ease-in-out infinite;
+        }
+        
+        @keyframes iconFloat {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-5px) rotate(5deg); }
+        }
+        
+        .menu-title {
+            font-family: 'Amiri', serif;
+            font-size: 1.5rem;
+            color: #be185d;
+            text-align: center;
+            margin-bottom: 10px;
+            font-weight: 700;
+            position: relative;
+            z-index: 2;
+            text-shadow: 0 0 10px rgba(190, 24, 93, 0.2);
+        }
+        
+        .menu-description {
+            color: #7c3aed;
+            text-align: center;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .section {
+            display: none;
+            animation: fadeInUp 0.8s ease-out;
+        }
+        
+        .section.active {
+            display: block;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px) scale(0.95);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+        
+        .section-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid;
+            border-image: linear-gradient(90deg, #ec4899, #f472b6) 1;
+            position: relative;
+        }
+        
+        .section-header::after {
+            content: '';
+            position: absolute;
+            bottom: -3px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, rgba(236, 72, 153, 0.3), rgba(244, 114, 182, 0.3));
+            animation: borderGlow 2s ease-in-out infinite;
+        }
+        
+        @keyframes borderGlow {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 0.8; }
+        }
+        
+        .section-icon {
+            font-size: 3rem;
+            margin-left: 20px;
+            filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.1)) drop-shadow(0 0 15px rgba(236, 72, 153, 0.3));
+            animation: sectionIconPulse 2s ease-in-out infinite;
+        }
+        
+        @keyframes sectionIconPulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+        
+        .section-title {
+            font-family: 'Amiri', serif;
+            font-size: 2.5rem;
+            color: #be185d;
+            font-weight: 700;
+            text-shadow: 0 0 15px rgba(190, 24, 93, 0.2);
+        }
+        
+        .section-content {
+            line-height: 1.8;
+            color: #374151;
+        }
+        
+        .intro-message {
+            background: linear-gradient(135deg, #fdf2f8 0%, #fce7f3 50%, #fbcfe8 100%);
+            border: 2px solid rgba(236, 72, 153, 0.2);
+            border-radius: 20px;
+            padding: 30px;
+            margin: 25px 0;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(236, 72, 153, 0.1);
+        }
+        
+        .intro-message::before {
+            content: '💝';
+            position: absolute;
+            top: 20px;
+            right: 25px;
+            font-size: 2.5rem;
+            opacity: 0.4;
+            animation: heartBeat 2s ease-in-out infinite;
+        }
+        
+        @keyframes heartBeat {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+        }
+        
+        .intro-message p {
+            color: #be185d;
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            font-weight: 500;
+        }
+        
+        .info-card {
+            background: linear-gradient(135deg, #fdf2f8 0%, #fce7f3 50%, #fbcfe8 100%);
+            border-radius: 20px;
+            padding: 25px;
+            margin: 20px 0;
+            border-right: 5px solid #ec4899;
+            position: relative;
+            box-shadow: 0 8px 25px rgba(236, 72, 153, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .info-card:hover {
+            transform: translateX(-5px);
+            box-shadow: 0 12px 35px rgba(236, 72, 153, 0.15);
+        }
+        
+        .info-card h3 {
+            color: #be185d;
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-shadow: 0 0 10px rgba(190, 24, 93, 0.2);
+        }
+        
+        .info-card p {
+            color: #be185d;
+            margin-bottom: 10px;
+            font-size: 1rem;
+        }
+        
+        .tips-container {
+            background: linear-gradient(135deg, #fce7f3 0%, #fdf2f8 50%, #fbcfe8 100%);
+            border-radius: 20px;
+            padding: 30px;
+            margin: 25px 0;
+            border: 2px solid rgba(236, 72, 153, 0.2);
+            box-shadow: 0 15px 40px rgba(236, 72, 153, 0.1);
+        }
+        
+        .tips-title {
+            color: #be185d;
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 600;
+            text-shadow: 0 0 10px rgba(190, 24, 93, 0.2);
+        }
+        
+        .tips-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .tips-list li {
+            margin: 15px 0;
+            padding: 20px;
+            background: linear-gradient(135deg, rgba(255,255,255,0.9) 0%, rgba(253, 242, 248, 0.9) 100%);
+            border-radius: 15px;
+            box-shadow: 0 6px 20px rgba(236, 72, 153, 0.1);
+            position: relative;
+            padding-right: 60px;
+            color: #be185d;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(236, 72, 153, 0.1);
+        }
+        
+        .tips-list li:hover {
+            transform: translateX(-8px) scale(1.02);
+            box-shadow: 0 10px 30px rgba(236, 72, 153, 0.15);
+        }
+        
+        .tips-list li::before {
+            content: '🌸';
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 1.8rem;
+            animation: tipIconSpin 4s linear infinite;
+        }
+        
+        @keyframes tipIconSpin {
+            0% { transform: translateY(-50%) rotate(0deg); }
+            100% { transform: translateY(-50%) rotate(360deg); }
+        }
+        
+        .tips-list li strong {
+            color: #be185d;
+            display: block;
+            margin-bottom: 5px;
+        }
+        
+        .faq-container {
+            margin: 25px 0;
+        }
+        
+        .faq-item {
+            background: linear-gradient(135deg, #fdf2f8 0%, #fce7f3 50%, #fbcfe8 100%);
+            border-radius: 15px;
+            padding: 25px;
+            margin: 20px 0;
+            border-right: 5px solid #ec4899;
+            position: relative;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 25px rgba(236, 72, 153, 0.1);
+        }
+        
+        .faq-item:hover {
+            transform: translateX(-8px) scale(1.02);
+            box-shadow: 0 12px 35px rgba(236, 72, 153, 0.15);
+        }
+        
+        .faq-question {
+            color: #be185d;
+            font-weight: 600;
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-shadow: 0 0 10px rgba(190, 24, 93, 0.2);
+        }
+        
+        .faq-question::before {
+            content: '🤔';
+            font-size: 1.5rem;
+            animation: questionBounce 2s ease-in-out infinite;
+        }
+        
+        @keyframes questionBounce {
+            0%, 100% { transform: scale(1) rotate(0deg); }
+            50% { transform: scale(1.2) rotate(10deg); }
+        }
+        
+        .faq-answer {
+            color: #be185d;
+            line-height: 1.7;
+            margin: 0;
+            font-size: 1rem;
+        }
+        
+        .back-button {
+            background: linear-gradient(135deg, #ec4899, #f472b6);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 25px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            margin-top: 30px;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 25px rgba(236, 72, 153, 0.3);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .back-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: left 0.5s;
+        }
+        
+        .back-button:hover::before {
+            left: 100%;
+        }
+        
+        .back-button:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 15px 40px rgba(236, 72, 153, 0.4);
+        }
+        
+        .conclusion-content {
+            background: linear-gradient(135deg, #fdf2f8 0%, #f3e8ff 25%, #fce7f3 50%, #e0e7ff 75%, #fdf2f8 100%);
+            border-radius: 25px;
+            padding: 40px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 20px 50px rgba(236, 72, 153, 0.15);
+        }
+        
+        .conclusion-content::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text x="20" y="30" font-size="15" fill="rgba(236,72,153,0.1)">🦋</text><text x="70" y="70" font-size="12" fill="rgba(168,85,247,0.1)">🌺</text><text x="50" y="50" font-size="18" fill="rgba(236,72,153,0.1)">💕</text></svg>') repeat;
+            animation: float 20s infinite linear;
+        }
+        
+        .conclusion-title {
+            font-family: 'Amiri', serif;
+            font-size: 2.2rem;
+            color: #be185d;
+            margin-bottom: 25px;
+            position: relative;
+            z-index: 2;
+            text-shadow: 0 0 15px rgba(190, 24, 93, 0.2);
+            animation: conclusionTitleGlow 3s ease-in-out infinite;
+        }
+        
+        @keyframes conclusionTitleGlow {
+            0%, 100% { text-shadow: 0 0 15px rgba(190, 24, 93, 0.2); }
+            50% { text-shadow: 0 0 25px rgba(190, 24, 93, 0.4), 0 0 35px rgba(168, 85, 247, 0.2); }
+        }
+        
+        .conclusion-text {
+            font-size: 1.1rem;
+            color: #7c3aed;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .love-message {
+            font-size: 1.4rem;
+            color: #db2777;
+            font-weight: 700;
+            margin: 25px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            position: relative;
+            z-index: 2;
+            text-shadow: 0 0 15px rgba(219, 39, 119, 0.3);
+            animation: loveMessagePulse 2s ease-in-out infinite;
+        }
+        
+        @keyframes loveMessagePulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        
+        .signature {
+            font-size: 1.1rem;
+            color: #9333ea;
+            font-style: italic;
+            margin-top: 20px;
+            position: relative;
+            z-index: 2;
+            text-shadow: 0 0 10px rgba(147, 51, 234, 0.2);
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+            
+            .content-area {
+                padding: 30px 25px;
+            }
+            
+            .main-title {
+                font-size: 2.2rem;
+            }
+            
+            .menu-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .header-icon {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="floating-hearts" id="floatingHearts"></div>
+    <div class="sparkles" id="sparkles"></div>
+    
+    <div class="container">
+        <div class="booklet">
+            <div class="header">
+                <div class="header-icons">
+                    <div class="header-icon">🌸</div>
+                    <div class="header-icon">💝</div>
+                    <div class="header-icon">🦋</div>
+                </div>
+                <h1 class="main-title">إلى ابنتي الغالية عائشة</h1>
+                <p class="subtitle">من أمك التي تحبك - دليلك الجميل في مرحلة البلوغ</p>
+            </div>
+            
+            <div class="content-area">
+                <!-- قائمة المحتويات -->
+                <div id="menu" class="menu-container">
+                    <div class="menu-grid">
+                        <div class="menu-item" onclick="showSection('intro')">
+                            <div class="menu-icon">🌺</div>
+                            <h3 class="menu-title">مقدمة</h3>
+                            <p class="menu-description">رسالة حب وترحيب من قلب الأم</p>
+                        </div>
+                        
+                        <div class="menu-item" onclick="showSection('puberty')">
+                            <div class="menu-icon">🌱</div>
+                            <h3 class="menu-title">ما هي مرحلة البلوغ؟</h3>
+                            <p class="menu-description">فهم هذه المرحلة المميزة من الحياة</p>
+                        </div>
+                        
+                        <div class="menu-item" onclick="showSection('physical')">
+                            <div class="menu-icon">🌸</div>
+                            <h3 class="menu-title">التغييرات الجسدية</h3>
+                            <p class="menu-description">التطورات الطبيعية في الجسم</p>
+                        </div>
+                        
+                        <div class="menu-item" onclick="showSection('emotional')">
+                            <div class="menu-icon">💭</div>
+                            <h3 class="menu-title">التغييرات العاطفية</h3>
+                            <p class="menu-description">فهم المشاعر والتقلبات المزاجية</p>
+                        </div>
+                        
+                        <div class="menu-item" onclick="showSection('tips')">
+                            <div class="menu-icon">💖</div>
+                            <h3 class="menu-title">نصائح للعناية بالنفس</h3>
+                            <p class="menu-description">إرشادات للصحة والعافية</p>
+                        </div>
+                        
+                        <div class="menu-item" onclick="showSection('faq')">
+                            <div class="menu-icon">❓</div>
+                            <h3 class="menu-title">الأسئلة الشائعة</h3>
+                            <p class="menu-description">إجابات على الاستفسارات المهمة</p>
+                        </div>
+                        
+                        <div class="menu-item" onclick="showSection('conclusion')">
+                            <div class="menu-icon">💕</div>
+                            <h3 class="menu-title">خاتمة</h3>
+                            <p class="menu-description">رسالة أخيرة مليئة بالحب</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- قسم المقدمة -->
+                <div id="intro" class="section">
+                    <div class="section-header">
+                        <div class="section-icon">🌺</div>
+                        <h2 class="section-title">مقدمة</h2>
+                    </div>
+                    <div class="section-content">
+                        <div class="intro-message">
+                            <p><strong>عزيزتي ابنتي،</strong></p>
+                            <p>أهديك هذا الكتيب كرفيق لك في مرحلة مميزة من حياتك. هذا الكتيب يحتوي على معلومات ونصائح لمساعدتك على فهم التغييرات التي تمرين بها خلال مرحلة البلوغ.</p>
+                            <p>أريدك أن تعرفي أنني هنا دائمًا لدعمك ومساعدتك في كل خطوة.</p>
+                        </div>
+                    </div>
+                    <button class="back-button" onclick="showMenu()">
+                        <span>🏠</span>
+                        العودة للقائمة الرئيسية
+                    </button>
+                </div>
+                
+                <!-- قسم ما هي مرحلة البلوغ -->
+                <div id="puberty" class="section">
+                    <div class="section-header">
+                        <div class="section-icon">🌱</div>
+                        <h2 class="section-title">ما هي مرحلة البلوغ؟</h2>
+                    </div>
+                    <div class="section-content">
+                        <div class="info-card">
+                            <p>مرحلة البلوغ هي فترة من الحياة حيث يبدأ جسم الفتاة بالتغير من جسم طفلة إلى جسم امرأة ناضجة.</p>
+                            <p>هذه المرحلة تبدأ عادة بين سن 9 و14 عامًا وتستمر لعدة سنوات.</p>
+                            <p>إنها رحلة طبيعية وجميلة يمر بها كل إنسان في طريقه للنضج والبلوغ.</p>
+                        </div>
+                    </div>
+                    <button class="back-button" onclick="showMenu()">
+                        <span>🏠</span>
+                        العودة للقائمة الرئيسية
+                    </button>
+                </div>
+                
+                <!-- قسم التغييرات الجسدية -->
+                <div id="physical" class="section">
+                    <div class="section-header">
+                        <div class="section-icon">🌸</div>
+                        <h2 class="section-title">التغييرات الجسدية</h2>
+                    </div>
+                    <div class="section-content">
+                        <div class="info-card">
+                            <h3>🌺 نمو الثديين</h3>
+                            <p>أحد أولى علامات البلوغ هو نمو الثديين. ستشعرين ببعض الألم أو الحساسية في هذه المنطقة، وهذا طبيعي تمامًا.</p>
+                        </div>
+                        
+                        <div class="info-card">
+                            <h3>🌙 الدورة الشهرية</h3>
+                            <p>ستبدأين في الحصول على الدورة الشهرية. الدورة الشهرية هي جزء طبيعي وصحي من البلوغ وتمر بها كل امرأة.</p>
+                            <p>قد يكون من المفيد الاحتفاظ بتقويم لتتبع مواعيد دورتك.</p>
+                        </div>
+                        
+                        <div class="info-card">
+                            <h3>🌿 نمو الشعر</h3>
+                            <p>ستلاحظين نمو الشعر في مناطق جديدة مثل تحت الإبطين ومنطقة العانة.</p>
+                            <p>يمكنك اختيار كيفية التعامل مع هذا الشعر بناءً على ما تشعرين بالراحة معه.</p>
+                        </div>
+                    </div>
+                    <button class="back-button" onclick="showMenu()">
+                        <span>🏠</span>
+                        العودة للقائمة الرئيسية
+                    </button>
+                </div>
+                
+                <!-- قسم التغييرات العاطفية -->
+                <div id="emotional" class="section">
+                    <div class="section-header">
+                        <div class="section-icon">💭</div>
+                        <h2 class="section-title">التغييرات العاطفية</h2>
+                    </div>
+                    <div class="section-content">
+                        <div class="info-card">
+                            <h3>🎭 التغيرات المزاجية</h3>
+                            <p>قد تشعرين بتغيرات في مزاجك، وهذا أمر طبيعي بسبب التغيرات الهرمونية.</p>
+                            <p>من المهم التعبير عن مشاعرك وعدم التردد في التحدث معي أو مع أصدقائك المقربين.</p>
+                        </div>
+                        
+                        <div class="info-card">
+                            <h3>🦋 زيادة الرغبة في الاستقلال</h3>
+                            <p>قد تشعرين برغبة أكبر في أن تكوني مستقلة وتتخذين قراراتك الخاصة.</p>
+                            <p>هذه خطوة مهمة نحو النضج، ولكن لا تنسي أنني هنا دائمًا لدعمك.</p>
+                        </div>
+                    </div>
+                    <button class="back-button" onclick="showMenu()">
+                        <span>🏠</span>
+                        العودة للقائمة الرئيسية
+                    </button>
+                </div>
+                
+                <!-- قسم النصائح -->
+                <div id="tips" class="section">
+                    <div class="section-header">
+                        <div class="section-icon">💖</div>
+                        <h2 class="section-title">نصائح للعناية بالنفس</h2>
+                    </div>
+                    <div class="section-content">
+                        <div class="tips-container">
+                            <h3 class="tips-title">
+                                <span>✨</span>
+                                نصائح مهمة لصحتك وعافيتك
+                            </h3>
+                            <ul class="tips-list">
+                                <li>
+                                    <strong>التغذية السليمة:</strong>
+                                    حاولي تناول طعام متوازن لتزويد جسمك بالعناصر الغذائية اللازمة
+                                </li>
+                                <li>
+                                    <strong>النوم الكافي:</strong>
+                                    اضمني الحصول على قسط كافٍ من النوم لمساعدة جسمك على النمو والتطور
+                                </li>
+                                <li>
+                                    <strong>النشاط البدني:</strong>
+                                    ممارسة الرياضة بانتظام تساعد في الحفاظ على صحتك الجسدية والعقلية
+                                </li>
+                                <li>
+                                    <strong>النظافة الشخصية:</strong>
+                                    الاهتمام بنظافتك الشخصية يعزز ثقتك بنفسك
+                                </li>
+                                <li>
+                                    <strong>شرب الماء:</strong>
+                                    تأكدي من شرب كمية كافية من الماء يومياً
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <button class="back-button" onclick="showMenu()">
+                        <span>🏠</span>
+                        العودة للقائمة الرئيسية
+                    </button>
+                </div>
+                
+                <!-- قسم الأسئلة الشائعة -->
+                <div id="faq" class="section">
+                    <div class="section-header">
+                        <div class="section-icon">❓</div>
+                        <h2 class="section-title">الأسئلة الشائعة</h2>
+                    </div>
+                    <div class="section-content">
+                        <div class="faq-container">
+                            <div class="faq-item">
+                                <div class="faq-question">هل من الطبيعي أن أشعر بالقلق؟</div>
+                                <div class="faq-answer">نعم، من الطبيعي أن تشعري بالقلق أحيانًا. إذا كان لديك أي مخاوف، لا تترددي في التحدث معي.</div>
+                            </div>
+                            
+                            <div class="faq-item">
+                                <div class="faq-question">ماذا لو لم أكن مرتاحة بجسمي؟</div>
+                                <div class="faq-answer">كل جسم فريد من نوعه، ومن المهم أن تحبي نفسك كما أنتِ. يمكنك التحدث معي إذا كنت بحاجة إلى دعم.</div>
+                            </div>
+                            
+                            <div class="faq-item">
+                                <div class="faq-question">متى يجب أن أستشير الطبيب؟</div>
+                                <div class="faq-answer">إذا كان لديك أي ألم شديد أو مخاوف صحية، لا تترددي في إخباري أو استشارة الطبيب.</div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="back-button" onclick="showMenu()">
+                        <span>🏠</span>
+                        العودة للقائمة الرئيسية
+                    </button>
+                </div>
+                
+                <!-- قسم الخاتمة -->
+                <div id="conclusion" class="section">
+                    <div class="section-header">
+                        <div class="section-icon">💕</div>
+                        <h2 class="section-title">خاتمة</h2>
+                    </div>
+                    <div class="section-content">
+                        <div class="conclusion-content">
+                            <h3 class="conclusion-title">رسالة أخيرة مليئة بالحب</h3>
+                            <p class="conclusion-text">
+                                عزيزتي، أنا هنا دائمًا لدعمك وإرشادك في هذه المرحلة من حياتك. 
+                                تذكري أنكِ لست وحدك، وأن هذه التغييرات جزء طبيعي من النمو.
+                            </p>
+                            <p class="conclusion-text">
+                                أنت فتاة قوية وذكية وجميلة، وأنا فخورة بك في كل لحظة من حياتك.
+                            </p>
+                            <div class="love-message">
+                                <span>🌸</span>
+                                أحبك كثيرًا، وفخورة بك دائمًا
+                                <span>🌸</span>
+                            </div>
+                            <div class="signature">
+                                مع كل الحب والحنان، أمك المحبة 💝
+                            </div>
+                        </div>
+                    </div>
+                    <button class="back-button" onclick="showMenu()">
+                        <span>🏠</span>
+                        العودة للقائمة الرئيسية
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // إنشاء قلوب متطايرة
+        function createFloatingHeart() {
+            const heartsContainer = document.getElementById('floatingHearts');
+            const heart = document.createElement('div');
+            heart.className = 'heart';
+            
+            const symbols = ['💕', '🌸', '🦋', '💝', '🌺', '✨'];
+            heart.innerHTML = symbols[Math.floor(Math.random() * symbols.length)];
+            heart.style.left = Math.random() * 100 + '%';
+            heart.style.animationDuration = (Math.random() * 4 + 8) + 's';
+            heart.style.animationDelay = Math.random() * 2 + 's';
+            
+            heartsContainer.appendChild(heart);
+            
+            setTimeout(() => {
+                heart.remove();
+            }, 12000);
+        }
+        
+        // إنشاء نجوم متلألئة
+        function createSparkle() {
+            const sparklesContainer = document.getElementById('sparkles');
+            const sparkle = document.createElement('div');
+            sparkle.className = 'sparkle';
+            
+            const sparkleSymbols = ['✨', '⭐', '🌟', '💫'];
+            sparkle.innerHTML = sparkleSymbols[Math.floor(Math.random() * sparkleSymbols.length)];
+            sparkle.style.left = Math.random() * 100 + '%';
+            sparkle.style.animationDuration = (Math.random() * 3 + 5) + 's';
+            sparkle.style.animationDelay = Math.random() * 2 + 's';
+            
+            sparklesContainer.appendChild(sparkle);
+            
+            setTimeout(() => {
+                sparkle.remove();
+            }, 8000);
+        }
+        
+        // إنشاء عناصر متطايرة بانتظام
+        setInterval(createFloatingHeart, 2500);
+        setInterval(createSparkle, 4000);
+        
+        // إنشاء بعض العناصر في البداية
+        for(let i = 0; i < 8; i++) {
+            setTimeout(createFloatingHeart, i * 800);
+            setTimeout(createSparkle, i * 1200);
+        }
+        
+        // وظائف التنقل
+        function showSection(sectionId) {
+            // إخفاء القائمة
+            document.getElementById('menu').style.display = 'none';
+            
+            // إخفاء جميع الأقسام
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(section => {
+                section.classList.remove('active');
+            });
+            
+            // إظهار القسم المطلوب
+            document.getElementById(sectionId).classList.add('active');
+            
+            // التمرير إلى الأعلى
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+            
+            // إضافة المزيد من العناصر المتطايرة عند فتح قسم جديد
+            for(let i = 0; i < 5; i++) {
+                setTimeout(createFloatingHeart, i * 300);
+                setTimeout(createSparkle, i * 500);
+            }
+        }
+        
+        function showMenu() {
+            // إخفاء جميع الأقسام
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(section => {
+                section.classList.remove('active');
+            });
+            
+            // إظهار القائمة
+            document.getElementById('menu').style.display = 'block';
+            
+            // التمرير إلى الأعلى
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+            
+            // إضافة عناصر متطايرة عند العودة للقائمة
+            for(let i = 0; i < 3; i++) {
+                setTimeout(createFloatingHeart, i * 400);
+            }
+        }
+        
+        // تأثيرات تفاعلية محسنة
+        document.addEventListener('DOMContentLoaded', function() {
+            // تأثير hover للعناصر التفاعلية
+            const menuItems = document.querySelectorAll('.menu-item');
+            menuItems.forEach(item => {
+                item.addEventListener('mouseenter', function() {
+                    // إضافة عناصر متطايرة عند hover
+                    createFloatingHeart();
+                    createSparkle();
+                });
+            });
+            
+            // تأثير النقر على الأزرار
+            const buttons = document.querySelectorAll('.back-button');
+            buttons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // إضافة تأثير بصري عند النقر
+                    for(let i = 0; i < 3; i++) {
+                        setTimeout(createSparkle, i * 200);
+                    }
+                });
+            });
+        });
+        
+        // تأثير الكتابة المتحركة للعناوين
+        function typeWriter(element, text, speed = 50) {
+            let i = 0;
+            element.innerHTML = '';
+            
+            function type() {
+                if (i < text.length) {
+                    element.innerHTML += text.charAt(i);
+                    i++;
+                    setTimeout(type, speed);
+                }
+            }
+            type();
+        }
+        
+        // تفعيل تأثير الكتابة عند تحميل الصفحة
+        window.addEventListener('load', function() {
+            const mainTitle = document.querySelector('.main-title');
+            const originalText = mainTitle.textContent;
+            typeWriter(mainTitle, originalText, 80);
+            
+            // إضافة المزيد من العناصر المتطايرة عند التحميل
+            setTimeout(() => {
+                for(let i = 0; i < 10; i++) {
+                    setTimeout(createFloatingHeart, i * 500);
+                    setTimeout(createSparkle, i * 700);
+                }
+            }, 2000);
+        });
+        
+        // تأثير التمرير التفاعلي
+        window.addEventListener('scroll', function() {
+            const scrolled = window.pageYOffset;
+            const rate = scrolled * -0.5;
+            
+            // تحريك العناصر المتطايرة بناءً على التمرير
+            const hearts = document.querySelectorAll('.heart');
+            hearts.forEach((heart, index) => {
+                heart.style.transform = `translateY(${rate * (index % 3 + 1)}px)`;
+            });
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'969b8eb96164881e',t:'MTc1NDI4NDMyMy4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
